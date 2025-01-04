@@ -1,14 +1,14 @@
-![image](https://github.com/user-attachments/assets/0f271d0a-7ae3-48e7-b166-31fdf934f941)### IDAI-103-2405460-Pravar-Golecha
+### IDAI-103-2405460-Pravar-Golecha
 
 # Personalized Fashion Recommender System using Generative A.I
 
-### Problem Definition
+## Problem Definition
 
 *In today’s fast-paced world, personalized fashion recommendations are becoming increasingly important. Consumers demand tailored suggestions that match their unique preferences, body types, and lifestyle needs. Current fashion recommendation systems often lack deep personalization, failing to consider diverse user inputs such as preferred materials, occasion-specific needs, or cultural influences. This results in generic suggestions that may not resonate with individual users.*
 
 *The goal of this project is to develop a Personalized Fashion Recommender System powered by Generative AI. The system will leverage user-provided data, such as body type, height, favorite colors, and occasion, to generate tailored fashion recommendations. By integrating the Gemini 1.5 Pro API, the system will dynamically adapt to real-time inputs and evolving fashion trends, providing users with accurate, context-specific suggestions.*
 
-### Research Findings
+## Research Findings
 
 #### Current Landscape of Fashion Recommendation Systems:-
 
@@ -71,7 +71,7 @@
 
 *- Seasonal trend reports from industry leaders.*
 
-### In-Depth Research:-
+## In-Depth Research:-
 
 *- Understanding User Behavior*
 
@@ -113,7 +113,7 @@
 
 *- Research AR tools for virtual try-ons, which complement personalized recommendations.*
 
-### Key Data Requirements
+## Key Data Requirements
 
 ##### Dynamic Trend Updates:
 
@@ -127,7 +127,7 @@
 
 *- Include user-uploaded images for personalized recommendations.*
 
-### Research Objectives
+## Research Objectives
 
 *- Explore the intersection of AI and fashion to identify the most effective approaches for personalized recommendations.*
 
@@ -137,7 +137,7 @@
 
 *- Benchmark against existing solutions to identify unique selling points and innovation opportunities.*
 
-### Objectives
+## Objectives
 
 *- Personalization: Ensure the system delivers recommendations that cater to individual user preferences and needs.*
 
@@ -147,7 +147,25 @@
 
 *- Trend Awareness: Maintain alignment with contemporary fashion styles and cultural trends.*
 
-### Model Integration and Hyperparameter Tuning
+## Creating Google Gemini API Key
+
+*-Step 1:First, we need to get an API key from the Google AI for Developers page (make sure you are logged in to your Google account). We can do this by clicking the Get an API key in Google AI studio button.*
+![image](https://github.com/user-attachments/assets/c98a1e00-14a5-495e-a842-9549969a9142)
+
+*-Step 2:Then, we will be redirected to 'Google AI Studio' and on that page we have to click on 'Create API Key'.*
+![image](https://github.com/user-attachments/assets/9553f4d1-0203-4474-a138-2fbf07e4dd75)
+
+*- Step 3:After clicking on it we need to type 'Gemini API' on 'Search Google Cloud Projects'(it will show like this).*
+![image](https://github.com/user-attachments/assets/8ed57e5b-692a-461d-9455-0c4d937d9dbe)
+
+*- Step 4:Then, click on 'Create API Key'.*
+![image](https://github.com/user-attachments/assets/2bb19b4d-9578-43e3-9858-d5bd207adcb0)
+
+*- Step 5:At last then copy your API key use it whereever you need it and do not share  it with anyone else.*
+![image](https://github.com/user-attachments/assets/b34087c5-1932-488e-8570-6d9e8a889b36)
+
+
+## Model Integration and Hyperparameter Tuning
 
 Integrating Gemini 1.5 Pro API
 
@@ -168,7 +186,7 @@ Integrating Gemini 1.5 Pro API
 
 *- Example input: A user specifies preferences for "a casual outfit" and provides body type details.*
 
-### Hyperparameter Tuning
+## Hyperparameter Tuning
 
 #### Temperature Control:
 
@@ -216,7 +234,7 @@ Integrating Gemini 1.5 Pro API
 
 ![image](https://github.com/user-attachments/assets/f89b4578-2985-4a75-b320-318d2f5c0df1)
 
-### Example of the response:-
+## Example of the response:-
 
 1) Prompt 1:Please suggest a casual summer outfit for a 20-year-old male who is 180 cm tall and prefers lightweight, trendy styles. Provide outfit details that focus on breathable fabrics and summer-appropriate colors.
 ![Screenshot 2025-01-04 205101](https://github.com/user-attachments/assets/aa6cce80-327d-470b-adfd-2686c26ae429)![Screenshot 2025-01-04 205121](https://github.com/user-attachments/assets/9ee31394-f4a3-4003-9f3a-c7522d759b9b)
@@ -248,7 +266,7 @@ Integrating Gemini 1.5 Pro API
 10) Prompt 10: Suggest a professional outfit for a 35-year-old female attending a tech conference. The user prefers minimalistic styles, neutral colors, and comfortable fabrics. Include accessories such as a laptop-friendly bag and shoes suitable for long hours
 ![Screenshot 2025-01-04 213806](https://github.com/user-attachments/assets/db94687b-6560-400f-bace-3d2839aae9c4)![Screenshot 2025-01-04 213817](https://github.com/user-attachments/assets/96700754-74cc-4c63-aa06-ef72f133bc5c)
 
-### Analyze and Interpret Outputs:
+## Analyzing and Interpreting Outputs:
 
 *1. Reviewing Outputs*
 *Check if the recommendations align with user inputs like occasion, preferences, and body type.*
@@ -275,4 +293,29 @@ Integrating Gemini 1.5 Pro API
 *Output: Navy slim-fit suit, white shirt, black shoes, minimalist belt and tie.*
 *Analysis: Matches the prompt, includes professional attire, and aligns with current trends.*
 
+
+## Model Validation and Optimization
+
+#### Explanation of the Steps done in the code:
+
+*- Data Preprocessing:*
+*We scale the features using StandardScaler, as many machine learning algorithms require data to be on the same scale.*
+
+*-Train-Test Split:*
+*The data is split into training and testing sets (80% for training and 20% for testing).*
+
+*-Cross-Validation:*
+*We use 5-fold cross-validation (cross_val_score) to assess the model's performance before any hyperparameter tuning.*
+
+*-Hyperparameter Tuning:*
+*We use GridSearchCV to search for the best hyperparameters. This step performs an exhaustive search over the hyperparameter grid and returns the best combination based on cross-validation performance.*
+
+*-Feature Selection:*
+*We use RFE (Recursive Feature Elimination) to select the most important features, reducing the dimensionality and potentially improving the model’s performance.*
+
+*-Model Training and Evaluation:*
+*After selecting the best parameters and features, we train the final model and evaluate it using accuracy and a detailed classification report (precision, recall, F1-score).*
+
+*-Model Saving:*
+*The best-trained model is saved using joblib for later use.*
 
