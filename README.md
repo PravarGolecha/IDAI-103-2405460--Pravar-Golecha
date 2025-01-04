@@ -164,69 +164,69 @@
 *- Step 5:At last then copy your API key use it whereever you need it and do not share  it with anyone else.*
 ![image](https://github.com/user-attachments/assets/b34087c5-1932-488e-8570-6d9e8a889b36)
 
+## Implementing Google Gemini API Key
+
+*- Step 1: Let’s first install the Gemini Python API package using pip(use this command first)*
+
+ ![Screenshot 2025-01-05 004612](https://github.com/user-attachments/assets/d6be9819-9283-4c07-935e-80a75f93d2d1)
+
+*- Step2: Configure the API Key in the Python Code*
+
+![image](https://github.com/user-attachments/assets/cb59f496-a349-48c7-9741-278b131c3cc4)
+ 
+*- Step 3: Create a Generative Model Instance*
+
+![image](https://github.com/user-attachments/assets/5ada75d4-ba0b-40a7-9a68-597e68c3b463)
+
+*- Step 4: Taking output from Gemini API*
+
+![image](https://github.com/user-attachments/assets/029ccc82-560b-4b19-bfe7-649d6642f0a2)
+
+Note: In the place of 'What is Python?' you need to put your prompt and run it 
 
 ## Model Integration and Hyperparameter Tuning
 
-Integrating Gemini 1.5 Pro API
+### Hyperparameter Tuning
+*Hyperparameter tuning optimizes a model's performance by selecting the best values for predefined settings (e.g., learning rate, batch size, number of layers).*
 
-#### Setting Up the API:
+*-Key Techniques:*
 
-*- Register for a Gemini 1.5 Pro API key and authenticate your account.*
+*1)Manual Tuning: Adjust parameters iteratively based on performance.*
 
-*- Configure the API in your Python environment using libraries like requests.*
+*2)Grid Search: Tests all combinations of hyperparameter values in a predefined grid.*
 
-#### Building the Functionality:
+*3)Random Search: Samples random combinations, faster than grid search.*
 
-*- Write a function to send user inputs (e.g., body type, preferences) to the API.*
+*4)Bayesian Optimization: Efficiently finds optimal hyperparameters by modeling the objective function.*
+
+*5)Hyperband: Dynamically allocates resources to promising configurations.*
 
 
-#### Testing the API:
+### Model Integration
+*Model integration is the process of embedding a trained model into a production system to make predictions or perform tasks.*
 
-*- Validate functionality using sample inputs and debug any issues.*
+*-Steps:*
 
-*- Example input: A user specifies preferences for "a casual outfit" and provides body type details.*
+*1)Model Deployment:*
+*Use frameworks like Flask, FastAPI, or Django for deploying as an API.*
+*Containerize using Docker for scalability.*
 
-## Hyperparameter Tuning
+*2)API Endpoint:*
+*Expose the model via REST or gRPC endpoints for real-time usage.*
 
-#### Temperature Control:
+*3)Input/Output Processing:*
+*Preprocess inputs (e.g., scaling or tokenization).*
+*Postprocess outputs for user-friendly results.*
 
-*- Adjust the temperature parameter to balance creativity and focus in the recommendations:*
+*4)Monitoring:*
+*Track metrics like response time and accuracy.*
+*Implement feedback loops for model updates.*
 
-*Lower values (e.g., 0.2) yield consistent, predictable outputs.*
+## Images of Prompting
 
-*Higher values (e.g., 0.8) encourage diversity and creativity.*
+![Screenshot 2025-01-05 011302](https://github.com/user-attachments/assets/278c1a8d-d272-4a7a-b5fc-e6b5b3f00d53)
 
-#### Sampling Parameters:
-
-*- Use top_k or top_p sampling to fine-tune output diversity and relevance.*
-
-*Example: Set top_k=50 to ensure high-probability suggestions without losing coherence.*
-
-#### Custom Prompt Optimization:
-
-*- Experiment with prompt structures for better API responses:-*
-
-*Basic: "Suggest a summer outfit."*
-
-*Refined: "Recommend a trendy summer outfit for a 20-year-old female who prefers vibrant colors."*
-
-#### Iterative Refinement:
-
-*- Continuously test different configurations and track output quality to identify optimal settings.*
-
-#### Validation
-
-*- Output Review:*
-
-*Compare API outputs with real-world fashion trends to assess alignment.*
-
-*- User Feedback:*
-
-*Collect and incorporate feedback from test users to refine suggestions.*
-
-*- Fine-Tuning:*
-
-*Adjust prompts, hyperparameters, or inputs based on observed performance.*
+![Screenshot 2025-01-05 011411](https://github.com/user-attachments/assets/a3a979ba-334f-44ea-ae25-02096e7f3dcb)
 
 ![Screenshot 2025-01-04 195406](https://github.com/user-attachments/assets/617cdbe9-a7e1-43aa-b6b8-f0978b83211f)
 
