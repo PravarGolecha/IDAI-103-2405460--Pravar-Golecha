@@ -12,7 +12,7 @@ pip install google-generativeai
 import google.generativeai as genai
 
 # Configure API key
-genai.configure(api_key='AIzaSyACRUbR0UlQOMrxP2y35czS4MCyud7SddI')
+genai.configure(api_key='enter you api key here')
 
 # Create GenerativeModel instance
 model = genai.GenerativeModel('gemini-1.5-flash')
