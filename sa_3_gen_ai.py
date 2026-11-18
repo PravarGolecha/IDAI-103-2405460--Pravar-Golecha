@@ -52,7 +52,7 @@ import requests
 
 def get_recommendations(data):
     url = "https://api.gemini-pro.com/recommend"
-    headers = {"Authorization": "Bearer AIzaSyACRUbR0UlQOMrxP2y35czS4MCyud7SddI"}
+    headers = {"Authorization": "Bearer your api key here"}
     response = requests.post(url, json=data, headers=headers)
     return response.json()
 
@@ -75,7 +75,7 @@ def get_recommendations(user_data, temperature=0.5, top_k=50):
     # API endpoint and headers
     url = "https://api.gemini-pro.com/recommend"
     headers = {
-        "Authorization": "Bearer AIzaSyACRUbR0UlQOMrxP2y35czS4MCyud7SddI",  # Replace with your API key
+        "Authorization": "Bearer your api key here",  # Replace with your API key
         "Content-Type": "application/json"
     }
 
